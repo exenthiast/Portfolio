@@ -166,7 +166,9 @@ export default function Navbar() {
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className={`text-lg font-bold transition-colors ${
-                  isActive ? "text-violet-400" : "text-foreground/75 hover:text-white"
+                  isActive 
+                    ? "text-violet-600 dark:text-violet-400" 
+                    : "text-foreground/75 hover:text-violet-600 dark:hover:text-white"
                 }`}
               >
                 {item.label}
