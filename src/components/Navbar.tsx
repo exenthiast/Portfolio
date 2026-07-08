@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, FileText, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 // CUSTOMIZE YOUR LINKS HERE
 const GITHUB_URL = "https://github.com/exenthiast"; 
@@ -108,12 +109,12 @@ export default function Navbar() {
 
           {/* Socials & CV Button */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 bg-white/5 border border-white/5 py-1 px-2 rounded-full">
+            <div className="flex items-center gap-1 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 py-1 px-2 rounded-full">
               <a
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full hover:bg-white/5 transition-all text-foreground/80 hover:text-white"
+                className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-all text-foreground/80 hover:text-foreground dark:hover:text-white"
                 title="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
@@ -122,87 +123,90 @@ export default function Navbar() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-full hover:bg-white/5 transition-all text-foreground/80 hover:text-white"
+                className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-all text-foreground/80 hover:text-foreground dark:hover:text-white"
                 title="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
 
-              {/* CV Button */}
-              <button
-                onClick={() => setIsCVOpen(true)}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-600 hover:to-cyan-600 text-white text-sm font-bold px-6 py-2.5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-md shadow-violet-500/10 cursor-pointer"
-              >
-                <FileText className="w-4 h-4" />
-                <span>Lihat CV</span>
-              </button>
-            </div>
-          </div>
+            <ThemeToggle />
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
+            {/* CV Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-foreground"
+              onClick={() => setIsCVOpen(true)}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-600 hover:to-cyan-600 text-white text-sm font-bold px-6 py-2.5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-md shadow-violet-500/10 cursor-pointer"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <FileText className="w-4 h-4" />
+              <span>Lihat CV</span>
             </button>
           </div>
         </div>
 
-        {/* Mobile Drawer */}
-        {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass-panel border-t-0 py-8 px-8 flex flex-col gap-5 animate-fade-in backdrop-blur-xl">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-lg font-bold transition-colors ${
-                    isActive ? "text-violet-400" : "text-foreground/75 hover:text-white"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              );
-            })}
-            <hr className="border-white/10 my-1" />
-            <div className="flex items-center justify-between gap-4">
-              <div className="flex gap-4">
-                <a
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2.5 rounded-full bg-white/5 text-foreground/80 hover:text-white"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
-                <a
-                  href={LINKEDIN_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2.5 rounded-full bg-white/5 text-foreground/80 hover:text-white"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
-              </div>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2.5 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-foreground"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
 
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsCVOpen(true);
-                }}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-500 to-cyan-500 text-white text-sm font-bold px-6 py-2.5 rounded-full cursor-pointer"
+      {/* Mobile Drawer */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 glass-panel border-t-0 py-8 px-8 flex flex-col gap-5 animate-fade-in backdrop-blur-xl">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.id;
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`text-lg font-bold transition-colors ${
+                  isActive ? "text-violet-400" : "text-foreground/75 hover:text-white"
+                }`}
               >
-                <FileText className="w-4 h-4" />
-                <span>Lihat CV</span>
-              </button>
+                {item.label}
+              </a>
+            );
+          })}
+          <hr className="border-black/10 dark:border-white/10 my-1" />
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex gap-4">
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-full bg-black/5 dark:bg-white/5 text-foreground/80 hover:text-white"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2.5 rounded-full bg-black/5 dark:bg-white/5 text-foreground/80 hover:text-white"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
             </div>
+
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setIsCVOpen(true);
+              }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-500 to-cyan-500 text-white text-sm font-bold px-6 py-2.5 rounded-full cursor-pointer"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Lihat CV</span>
+            </button>
           </div>
-        )}
+        </div>
+      )}
       </nav>
 
       {/* PDF View Modal Overlay */}
