@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import LoadingScreen from "@/components/LoadingScreen";
+import MouseGlow from "@/components/MouseGlow";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -20,6 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${outfit.variable} antialiased selection:bg-violet-500/30 selection:text-white`}>
+        <LoadingScreen />
+        <MouseGlow />
         {/* Soft glowing ambient backgrounds */}
         <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-violet-600/10 blur-[120px] animate-pulse-slow" />

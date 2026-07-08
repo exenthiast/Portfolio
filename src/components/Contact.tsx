@@ -46,8 +46,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-foreground/50 block font-mono">EMAIL ME</span>
-                  <a href="mailto:hello@example.com" className="text-sm font-semibold hover:underline">
-                    hello@example.com
+                  <a href="mailto:alfizdestaap@gmail.com" className="text-sm font-semibold hover:underline">
+                    alfizdestaap@gmail.com
                   </a>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-foreground/50 block font-mono">LOCATION</span>
-                  <span className="text-sm font-semibold text-white">Jakarta, Indonesia</span>
+                  <span className="text-sm font-semibold text-white">Yogyakarta, Indonesia</span>
                 </div>
               </div>
             </div>
