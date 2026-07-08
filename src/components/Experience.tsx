@@ -22,6 +22,13 @@ export default function Experience() {
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"]
     },
     {
+      year: "Jan 2026 - Jun 2026",
+      title: "Backend Web Developer at Universitas Global Nusantara",
+      projectType: "Academic Information System",
+      description: "Designed and developed the Academic Information System web application for Universitas Global Nusantara. Built robust backend APIs, database schemas, and administrative panels using Laravel and MySQL.",
+      technologies: ["Laravel", "PHP", "MySQL"]
+    },
+    {
       year: "Aug 2025 - Dec 2025",
       title: "Frontend Web Developer at Lazuardy",
       projectType: "Private Tutoring Platform",
