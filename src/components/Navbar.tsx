@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // CUSTOMIZE YOUR LINKS HERE
 const GITHUB_URL = "https://github.com/exenthiast"; 
-const LINKEDIN_URL = "https://linkedin.com/in/your-username";
+const LINKEDIN_URL = "https://www.linkedin.com/in/alfiz-desta-0a0318326/";
 const CV_URL = "/CV_ALFIZ.pdf"; // Updated to match your uploaded CV file
 
 export default function Navbar() {
