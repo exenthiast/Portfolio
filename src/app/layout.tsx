@@ -4,6 +4,7 @@ import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
 import MouseGlow from "@/components/MouseGlow";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -33,6 +34,11 @@ export default function RootLayout({
             <div className="absolute top-[40%] left-[60%] w-[40%] h-[40%] rounded-full bg-rose-600/5 blur-[150px] animate-pulse-slow" style={{ animationDelay: "-4s" }} />
           </div>
           {children}
+          
+          {/* Floating Theme Switcher */}
+          <div className="fixed bottom-6 right-6 z-50">
+            <ThemeToggle />
+          </div>
         </ThemeProvider>
       </body>
     </html>

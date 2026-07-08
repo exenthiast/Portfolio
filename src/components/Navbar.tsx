@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Github, Linkedin, FileText, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "./ThemeToggle";
 
 // CUSTOMIZE YOUR LINKS HERE
 const GITHUB_URL = "https://github.com/exenthiast"; 
@@ -130,8 +129,6 @@ export default function Navbar() {
               </a>
             </div>
 
-            <ThemeToggle />
-
             {/* CV Button */}
             <button
               onClick={() => setIsCVOpen(true)}
@@ -145,7 +142,6 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2.5 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-foreground"

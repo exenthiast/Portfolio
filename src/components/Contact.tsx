@@ -34,14 +34,14 @@ export default function Contact() {
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-2xl" />
 
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-white">Let&apos;s talk about your project</h3>
+            <h3 className="text-2xl font-bold mb-4 text-foreground">Let&apos;s talk about your project</h3>
             <p className="text-foreground/70 text-sm font-light leading-relaxed mb-8">
               I am open to freelance work, full-time positions, or just having a chat about tech. Feel free to shoot me a message!
             </p>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/5 border border-white/10 rounded-2xl text-cyan-400">
+                <div className="p-3 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl text-cyan-400">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -53,18 +53,18 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/5 border border-white/10 rounded-2xl text-violet-400">
+                <div className="p-3 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl text-violet-400">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <span className="text-[10px] text-foreground/50 block font-mono">LOCATION</span>
-                  <span className="text-sm font-semibold text-white">Yogyakarta, Indonesia</span>
+                  <span className="text-sm font-semibold text-foreground">Yogyakarta, Indonesia</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-white/5 text-[11px] text-foreground/45 font-mono">
+          <div className="mt-12 pt-6 border-t border-black/5 dark:border-white/5 text-[11px] text-foreground/45 font-mono">
             © {new Date().getFullYear()} DESTAZ. ALL RIGHTS RESERVED.
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function Contact() {
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-white/10 transition-colors"
+                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-black/10 dark:focus:bg-white/10 transition-colors"
                 placeholder="John Doe"
               />
             </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-white/10 transition-colors"
+                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-black/10 dark:focus:bg-white/10 transition-colors"
                 placeholder="john@example.com"
               />
             </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                 rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-white/10 transition-colors resize-none"
+                className="w-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-violet-500 focus:bg-black/10 dark:focus:bg-white/10 transition-colors resize-none"
                 placeholder="Hi, I want to talk about..."
               />
             </div>

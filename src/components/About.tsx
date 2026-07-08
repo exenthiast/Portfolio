@@ -64,12 +64,12 @@ export default function About() {
           </div>
 
           {/* Education Info */}
-          <div className="glass-panel p-6 rounded-2xl flex items-center gap-4 bg-white/5 border border-white/10">
+          <div className="glass-panel p-6 rounded-2xl flex items-center gap-4">
             <div className="p-3 bg-violet-500/10 rounded-xl text-violet-400">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="font-bold text-sm text-white">Software Engineering Technology</h4>
+              <h4 className="font-bold text-sm text-foreground">Software Engineering Technology</h4>
               <p className="text-xs text-foreground/60">University of Gadjah Mada • Class of 2024</p>
             </div>
           </div>
@@ -88,11 +88,11 @@ export default function About() {
               key={index}
               className="glass-panel glass-panel-hover p-6 rounded-3xl flex gap-5 items-start relative overflow-hidden"
             >
-              <div className="p-3 bg-white/5 rounded-2xl border border-white/10">
+              <div className="p-3 bg-black/5 dark:bg-white/5 rounded-2xl border border-black/10 dark:border-white/10">
                 {item.icon}
               </div>
               <div>
-                <h4 className="font-bold text-lg text-white mb-1.5">{item.title}</h4>
+                <h4 className="font-bold text-lg text-foreground mb-1.5">{item.title}</h4>
                 <p className="text-sm text-foreground/70 leading-relaxed font-light">{item.desc}</p>
               </div>
             </div>

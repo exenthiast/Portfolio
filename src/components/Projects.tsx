@@ -81,10 +81,10 @@ export default function Projects() {
             className="glass-panel glass-panel-hover rounded-3xl overflow-hidden flex flex-col h-full group"
           >
             {/* Visual Header/Placeholder using CSS Gradient */}
-            <div className={`h-48 w-full bg-gradient-to-tr ${project.gradient} relative flex items-center justify-center p-6 border-b border-white/5`}>
+            <div className={`h-48 w-full bg-gradient-to-tr ${project.gradient} relative flex items-center justify-center p-6 border-b border-black/5 dark:border-white/5`}>
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="glass-panel p-4 rounded-full scale-90 group-hover:scale-100 transition-transform duration-300">
-                <FolderGit2 className="w-8 h-8 text-white" />
+                <FolderGit2 className="w-8 h-8 text-foreground dark:text-white" />
               </div>
             </div>
 
@@ -94,7 +94,7 @@ export default function Projects() {
                 <span className="text-xs font-bold text-violet-400 uppercase tracking-widest block mb-2">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-foreground dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-foreground/75 font-light leading-relaxed mb-6">
@@ -108,7 +108,7 @@ export default function Projects() {
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
-                      className="text-[10px] font-medium bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full text-white/80"
+                      className="text-[10px] font-medium bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-0.5 rounded-full text-foreground/80 dark:text-white/80"
                     >
                       {t}
                     </span>
@@ -121,7 +121,7 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 text-xs text-foreground/70 hover:text-white transition-colors"
+                    className="flex items-center gap-1.5 text-xs text-foreground/70 hover:text-foreground dark:hover:text-white transition-colors"
                   >
                     <Github className="w-4 h-4" />
                     <span>Source</span>
@@ -130,7 +130,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-1.5 text-xs text-foreground/70 hover:text-white transition-colors"
+                    className="flex items-center gap-1.5 text-xs text-foreground/70 hover:text-foreground dark:hover:text-white transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Demo</span>

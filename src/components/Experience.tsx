@@ -78,7 +78,7 @@ export default function Experience() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-3 tracking-wide mt-2">
+              <h3 className="text-xl font-bold text-foreground mb-3 tracking-wide mt-2">
                 {exp.title}
               </h3>
 
@@ -90,11 +90,11 @@ export default function Experience() {
 
             {/* Technologies list */}
             {exp.technologies && (
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-black/5 dark:border-white/5">
                 {exp.technologies.map((tech, techIdx) => (
                   <span
                     key={techIdx}
-                    className="text-[10px] text-white/50 bg-white/5 px-2 py-1 rounded-md"
+                    className="text-[10px] text-foreground/60 dark:text-white/50 bg-black/5 dark:bg-white/5 px-2 py-1 rounded-md"
                   >
                     {tech}
                   </span>

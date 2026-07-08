@@ -37,7 +37,7 @@ export default function Skills() {
             {/* Glowing Accent */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-rose-600/5 rounded-full blur-xl group-hover:bg-rose-600/10 transition-colors" />
 
-            <h3 className="text-xl font-bold mb-6 text-white border-b border-white/5 pb-4">
+            <h3 className="text-xl font-bold mb-6 text-foreground border-b border-black/5 dark:border-white/5 pb-4">
               {cat.title}
             </h3>
 
