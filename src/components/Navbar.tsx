@@ -64,7 +64,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-5 bg-background/70 backdrop-blur-lg border-b border-white/10"
+            ? "py-5 bg-background/70 backdrop-blur-lg border-b border-black/5 dark:border-white/10"
             : "py-8 bg-transparent"
         }`}
       >
@@ -87,7 +87,9 @@ export default function Navbar() {
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                     className={`text-sm font-semibold transition-colors py-2 px-5 rounded-full relative z-10 ${
-                      isActive || isHovered ? "text-white" : "text-foreground/50"
+                      isActive || isHovered 
+                        ? "text-violet-600 dark:text-white" 
+                        : "text-zinc-600 dark:text-foreground/50"
                     }`}
                   >
                     {/* Active or Hover Background Pill */}
@@ -95,7 +97,9 @@ export default function Navbar() {
                       <motion.span
                         layoutId="navbar-active-hover"
                         className={`absolute inset-0 rounded-full -z-10 ${
-                          isHovered ? "bg-white/10" : "bg-white/5 border border-white/10"
+                          isHovered 
+                            ? "bg-black/5 dark:bg-white/10" 
+                            : "bg-violet-500/10 dark:bg-white/5 border border-violet-500/20 dark:border-white/10"
                         }`}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
