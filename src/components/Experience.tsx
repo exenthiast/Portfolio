@@ -15,18 +15,11 @@ interface ExperienceItem {
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
-      year: "2024 - Present",
-      title: "Lead Frontend Engineer",
-      projectType: "Enterprise Web Application",
-      description: "Developed and maintained the core frontend architecture of an enterprise-level SaaS platform. Improved load performance by 40% using Next.js Server Components and advanced caching strategy.",
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"]
-    },
-    {
       year: "Jan 2026 - Jun 2026",
       title: "Backend Web Developer at Universitas Global Nusantara",
       projectType: "Academic Information System",
       description: "Designed and developed the Academic Information System web application for Universitas Global Nusantara. Built robust backend APIs, database schemas, and administrative panels using Laravel and MySQL.",
-      technologies: ["Laravel", "PHP", "MySQL"]
+      technologies: ["Laravel", "PHP", "MySQL", "REST APIs"]
     },
     {
       year: "Aug 2025 - Dec 2025",
@@ -34,20 +27,6 @@ export default function Experience() {
       projectType: "Private Tutoring Platform",
       description: "Developed and optimized the official web application for Lazuardy, a prominent private tutoring (bimbel) institution in Jogja. Engineered the user interface using Vue.js to deliver a seamless client experience.",
       technologies: ["Vue.js", "JavaScript", "Bootstrap", "CSS3"]
-    },
-    {
-      year: "2023 - 2024",
-      title: "Fullstack Developer",
-      projectType: "E-Commerce System & Logistics",
-      description: "Designed scalable APIs and responsive user interfaces. Automated inventory synchronization across multiple marketplaces, reducing inventory errors by 95%.",
-      technologies: ["Node.js", "Express", "React", "PostgreSQL", "Prisma", "Docker"]
-    },
-    {
-      year: "2022 - 2023",
-      title: "Junior Web Developer",
-      projectType: "Company Profile & CMS Websites",
-      description: "Built SEO-friendly and highly interactive client websites. Implemented headless CMS solutions, allowing content creators to publish updates effortlessly.",
-      technologies: ["JavaScript", "HTML5", "CSS3", "Tailwind CSS", "WordPress API"]
     }
   ];
 
