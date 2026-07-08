@@ -26,7 +26,7 @@ export default function Experience() {
       title: "Frontend Web Developer at Lazuardy",
       projectType: "Private Tutoring Platform",
       description: "Developed and optimized the official web application for Lazuardy, a prominent private tutoring (bimbel) institution in Jogja. Engineered the user interface using Vue.js to deliver a seamless client experience.",
-      technologies: ["Vue.js", "JavaScript", "HTML5", "CSS3"]
+      technologies: ["Vue.js", "JavaScript", "Bootstrap", "CSS3"]
     },
     {
       year: "2023 - 2024",
